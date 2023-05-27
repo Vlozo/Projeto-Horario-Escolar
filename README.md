@@ -1,9 +1,10 @@
 # Projeto-Horario-Escolar
 
-teste
-
 ### Descrição
-Proposta de um sistema que controle os horários de entrada e saída escolares, notificando alunos e responsáveis caso ocorram eventuais mudanças. Também incluso um sistema que vai supervisionar a autenticação da chamada presencial do aluno e notificar caso haja divergência entre as agendas.
+
+Proposta de um sistema que controle os horários de entrada e saída escolares, notificando alunos e responsáveis caso
+ocorram eventuais mudanças. Também incluso um sistema que vai supervisionar a autenticação da chamada presencial do
+aluno e notificar caso haja divergência entre as agendas.
 
 ### 📌 Tarefas
 
@@ -20,14 +21,18 @@ Proposta de um sistema que controle os horários de entrada e saída escolares, 
 ### 💡 Ideias e Sugestões
 
 - Criar uma funcionalidade para que professores possam declarar automaticamente sua própria ausência, ou agenda-la.
-- Vincular ao "perfil" do aluno o número de celular e email de até dois responsáveis, que só possa ser alterado pelo administrador.
+- Vincular ao "perfil" do aluno o número de celular e email de até dois responsáveis, que só possa ser alterado pelo
+  administrador.
 - Criar uma função que permita o administrador declarar e agendar ponto facultativo.
 - Possivelmente não utilizar um bot para os alertas e implementar uma área com essa função dentro do sistema
 
 ## ⚠ Observações sobre o sistema
 
-- Fazer o programa verificar se há divergência na chamada toda vez que o professor atualizar a situação do aluno no diário.
+- Fazer o programa verificar se há divergência na chamada toda vez que o professor atualizar a situação do aluno no
+  diário.
 - Permitir o acesso a grade de horários a qualquer visitante, mesmo que não tenha login.
 
 ## 📚 Referências
- [Mindmap](https://www.mindomo.com/mindmap/controle-de-horrio-de-alunos-8dd28347c994422080ea4f7d6e42256e) - Mapa-mental com as principais funcionalidades do projeto.
+
+[Mindmap](https://www.mindomo.com/mindmap/controle-de-horrio-de-alunos-8dd28347c994422080ea4f7d6e42256e) - Mapa-mental
+com as principais funcionalidades do projeto.
