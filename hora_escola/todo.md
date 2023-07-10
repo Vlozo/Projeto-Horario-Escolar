@@ -3,12 +3,12 @@
 ### USAR TDD https://docs.djangoproject.com/en/4.2/topics/testing/tools/
 
 ## Xandinho
+
 * [ ] TDD - SEMPRE
 * [ ] Crias as telas de erros 505, 404 e 303
 * [ ] Criar base.html em conformes as aulas do Henrique
 * [ ] Criar tela de login - Formata o CSS
 * [ ] Validar telefones - Forms e se possível no front
-
 
 ## Lucas
 
@@ -23,13 +23,14 @@
 
 * [ ] TDD - SEMPRE
 * [ ] Elabora cadastro de horários. Lembrado que somente as escolas podem administrar as informações e o restante,
-      somente tem acesso de leitura.
+  somente tem acesso de leitura.
 * [ ] E os professores, quais o tipo de acessos eles têm que ter ?
 * [ ] Criar o sistema de notificações
 
 ## Pra fazer no futuro
 
 * [ ] Alterar o sistema para incluir a escola.
+* [ ] CRIAR O CI/CD
 
 # Material de estudo
 
@@ -40,3 +41,5 @@
 * https://github.com/django/django
 
 * https://getbootstrap.com/
+
+* https://peps.python.org/pep-0008/ 
