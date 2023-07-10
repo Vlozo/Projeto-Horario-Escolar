@@ -21,4 +21,5 @@ from hora_escola.core import urls as core_urls
 urlpatterns = [
     path('', include(core_urls)),
     path('admin/', admin.site.urls),
+
 ]
