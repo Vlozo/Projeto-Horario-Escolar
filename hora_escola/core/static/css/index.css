@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* ---- [ MOBILE FIRST ] ----  */
+
+main {
+
+    height: 100vh;
+    max-width: 100vw;
+    position: relative;
+
+}
+
+section {
+    width: 410px;
+    padding: 12px 30px;
+    margin-bottom: 35px;
+
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    
+}
+
+section > h1 {
+    margin-bottom: 15px;
+}
+
+aside.window {
+    height: 360px;
+    width: 352px;
+    margin-bottom: 10%;
+    
+    position: relative;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.input_field > input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div#submit_button > input {
+    height: 50px;
+    width: 100%;
+    
+    margin: 10px 0px 10px 0px;
+
+}
+
+form > p {
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+}
+
+div#button_nova_conta {
+    width: 60%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+img#eye-icon {
+    margin: 20px 20px 0px 0px;
+    right: 12px;
+}
+
+form#theme-switch{
+    left: 94.5%;
+    /* float: right; */
+    margin: 12px 0px 0px 0px;
+}
+
+/* Configurações de responsividade */
+
+/* ---- [Tablet] ---- */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    section {
+        width: 90vw;
+        padding: 35px ;
+    }
+
+    aside.window {
+        width: 90vw;
+    }
+
+    form#theme-switch {
+        left: 96.5%
+    }
+
+}
+
+/* ---- [Computadores/Laptops] ----  */
+
+@media screen and (min-width: 992px) {
+    aside.window, section {
+        transform: translate(0, 0);
+        top: 0;
+        left: 0;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 92vw;
+        
+    }
+
+    section {
+        display: inline-block;
+        text-align: left;
+        margin: 0px 0px 15px 8%;
+        padding: 5px;
+    }
+
+    aside.window {
+        display: inline-block;
+        margin-left: 110px;
+        margin-bottom: 0px;
+    }
+
+    form#theme-switch {
+        left: 97.5%;
+    }
+
+}

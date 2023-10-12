@@ -17,9 +17,13 @@ class ClubAdmin(admin.ModelAdmin):
     list_display = ("nome",)
     search_fields = ("nome",)
 
+class UsuarioAdmin(admin.ModelAdmin):
+    readonly_fields = ('matricula', 'data_nascimento', 'email', 'telefone', 'senha')
+
 admin.site.register(Turma, TurmaAdmin)
 admin.site.register(Aluno, AlunoAdmin)
 admin.site.register(Responsavel, ResponsavelAdmin)
 admin.site.register(Club, ClubAdmin)
+admin.site.register(Usuario, UsuarioAdmin)
 
 # Register your models here.

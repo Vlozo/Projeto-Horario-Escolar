@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* ---- [ MOBILE FIRST ] ---- */
+
+body {
+    width: auto;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+h1, p{
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 4px;
+}
+
+p {
+    
+    margin-bottom: 12px;
+}
+
+aside.window {
+    display: inline-block;
+    position: relative;
+    align-content: center; 
+    
+    width: 360px;
+    margin: 12% 0px 8% 0px;   
+    
+}
+
+div.input_field > p {
+    text-align: left;
+    margin-bottom: 2px;
+    
+}
+
+div.input_field > select {
+    border-radius: 8px;
+    height: 30px;
+    width: 120px;
+    margin-bottom: 12px;
+}
+
+div.input_field > input{
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+div#submit_button > input{
+    padding: 20px 0px;
+    margin: 16px 0px 0px 0px;
+    width: 100%;
+
+}
+
+div.input_field > legend {
+    margin-bottom: 8px;
+}
+
+ul#invalid_input > li {
+    color: red;
+    list-style: none;
+    font-size: 0.95em;
+    margin: 3px 0px 8px 0px;
+}
+
+li#instruction {
+    color: #3482db !important;
+}
+
+/* Configurações de responsividade */
+
+/* ---- [Tablet] ---- */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    
+    div.input_field:nth-child(5) {
+        display: flex;
+    }
+
+    div.input_field:nth-child(5) > input {
+        margin-right: 8px;
+    }
+
+    div.input_field:nth-child(5) > input:last-child {
+        margin-right: 0px;
+    }
+
+    aside.window {
+        margin-top: 8%;
+        width: 90vw;
+    }
+
+}
+
+/* ---- [Computadores/Laptops] ---- */
+
+@media screen and (min-width: 992px) {
+
+    div.input_field:nth-child(5), div.input_field:nth-child(4) {
+        display: flex;
+    }
+
+    div.input_field:nth-child(5) > input, div.input_field:nth-child(4) > input {
+        margin-right: 8px;
+    }
+
+    div.input_field:nth-child(5) > input:last-child, div.input_field:nth-child(4) > input:last-child{
+        margin-right: 0px;
+    }
+
+    aside.window {
+        width: 50vw;
+        margin: 5.5% 0px 12px 0px;
+    }
+
+}

@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* [---- ARQUIVO EXCLUSIVAMENTE DE ESTILO NÃO FAÇA ALTERAÇÕES DE POSICIONAMENTO AQUI!!! ----] */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ---- Padronização de cores que podem ser mudadas pelo modo noturno no script.js ---- */
+
+:root {
+    --background-color: #eff1f3;
+    --text-color: #000000;
+    --button-text: #ffffff;
+    --destaque: #3482db;
+    --login-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-txt: #000000;
+    --input-border: #cacaca;
+    --input-placeholder: #949494;
+    --button-entrar: #3482db;
+    --button-novaconta: #289c55;
+    --switch-color: #212529;
+}
+
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.2;
+
+}
+
+/* ---- Configurações de estilo para seção fora da janela de formulário ---- */
+
+section > h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--destaque);
+}
+
+section > p {
+    font-size: 1.4em;
+}
+
+/* ---- Janela que contém elementos de formulário ----- */
+
+aside.window {
+    background-color: var(--login-bg);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 16px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.150);
+    
+}
+
+div.input_field > input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1em;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--input-border);
+}
+
+div#submit_button > input {
+    background-color: var(--button-entrar);
+    color: var(--button-text);
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+div#submit_button > input:hover {
+    cursor: pointer;
+    background-color: #2863a7;
+}
+
+input::placeholder {
+    color: var(--input-placeholder);
+}
+
+/* ---- Link - 'Esqueceu a senha?' ---- */
+
+a {
+    text-decoration: none;
+    color: var(--destaque);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Botão Secundário (sem submit) ---- */
+
+div#button_nova_conta > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--button-text);
+    
+}
+
+div#button_nova_conta {
+    background-color: var(--button-novaconta);
+    border-radius: 8px;
+    transition: 0.2s;
+    padding: 14px;
+    box-sizing: border-box;
+
+}
+
+div#button_nova_conta:hover {
+    cursor: pointer;
+    background-color: #1e5533;   
+}
+
+/* ---- Caixas de seleção ---- */
+
+div.input_field > select { 
+    background-color: var(--input-bg);
+    color: var(--input-txt);
+}
+
+/* ---- Configurações Extras ---- */
+
+.hidden {
+    display: none;
+}
+
+input:focus, textarea:focus {
+    outline-color: var(--destaque);
+    border: none;
+    box-shadow: none;
+}

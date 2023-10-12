@@ -23,3 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
 ]
+
+handler400 = "hora_escola.core.views.handler400"
+handler401 = "hora_escola.core.views.handler401"
+CSRF_FAILURE_VIEW = "hora_escola.core.views.handler403"
+handler404 = "hora_escola.core.views.handler404"
+handler500 = "hora_escola.core.views.handler500"
+

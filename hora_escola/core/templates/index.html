@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de horários</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+
+    <!-- Javascript -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+
+</head>
+<body>
+
+    <!-- BOTÃO - MODO NOTURNO -->
+    <form id="theme-switch">
+        <input type="checkbox" name="theme" id="theme">
+        <label class="label" for="theme"><div class="gg-dark-mode"></div></label>
+    </form>
+
+        <!-- APRESENTAÇÃO -->
+        <main>
+            <section>
+                <h1>Bem vindo ao Aplicativo!</h1>
+                <p>Aqui você poderá facilmente consultar o quadro de horários do seu colégio e acompanhar sua frequência no calendário de presença das suas disciplinas.</p>
+            </section>
+
+        <!-- LOGIN -->
+            <aside class="window">
+                <form action="qualquer.php" method="post" id="form_login" autocomplete="off">
+
+                    <!--EMAIL-->
+                    <div class="input_field">
+                        <input type="email" name="email" id="email_id" placeholder="Email">
+                    </div>
+
+                    <!--SENHA-->
+                    <div class="input_field">
+                        <input type="password" name="senha" id="senha_id" placeholder="Senha">
+                        <img id="eye-icon" src="static/assets/eye.svg" alt="ícone olho">
+                    </div>
+
+                    <!--SUBMIT-->
+                    <div id="submit_button">
+                        <input type="submit" value="Entrar">
+                    </div>
+
+                    <!-- ESQUECI A SENHA E CRIAR NOVA CONTA-->
+                    <p><a href="#">Esqueceu a senha?</a></p>
+                    <div id="button_nova_conta"><a href="/cadastro">Criar nova conta</a></div>
+
+                </form>
+            </aside>
+            
+        </main>
+</body>
+</html>

@@ -13,8 +13,8 @@ class Turma(models.Model):
 class Aluno(models.Model):
     nome = models.CharField(max_length=100)
     turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
-    telefone = models.IntegerField(null=True)
-    email = models.EmailField(max_length=254, null=True)
+    matricula = models.CharField(max_length=24, default='')
+    data_nascimento = models.DateField(null=True)
 
     def __str__(self):
         return f"{self.nome} {self.turma}"
@@ -39,3 +39,19 @@ class Club(models.Model):
 
     def __str__(self):
         return f"{self.nome}"
+
+# -------- Login/Cadastro --------
+
+class Usuario(models.Model):
+    matricula = models.CharField(max_length=24)
+    data_nascimento = models.DateField(null=True)
+    email = models.EmailField()
+    telefone = models.CharField(max_length=14, null=True)
+    senha = models.CharField(max_length=64)
+
+    def __str__(self):
+        return f"{self.matricula}, {self.email}"
+
+    class Meta:
+        verbose_name = "Usuário"
+        verbose_name_plural = "Usuários"
