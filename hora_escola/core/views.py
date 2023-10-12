@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
-from .forms import CadastroForm
+# from .forms import CadastroForm
 from django.views.decorators.http import require_POST
 
 
@@ -9,22 +9,27 @@ def home(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render())
 
+def cadastro(request):
+    pass
 # def cadastro(request):
 #     template = loader.get_template('cadastro.html')
 #     return HttpResponse(template.render())
 
-def cadastro(request):
-    context = {}
-    context['form'] = CadastroForm()
-    return render(request, "cadastro_copy.html", context)
-
-@require_POST
+# def cadastro(request):
+#     context = {}
+#     context['form'] = CadastroForm()
+#     return render(request, "cadastro_copy.html", context)
+#
 def processar_formulario(request):
-    form = CadastroForm(request.POST)
-    if form.is_valid():
-        form.save()
-        return HttpResponse("Cadastro efetuado com sucesso.")
-    return render(request, "500.html")
+    pass
+
+# @require_POST
+# def processar_formulario(request):
+#     form = CadastroForm(request.POST)
+#     if form.is_valid():
+#         form.save()
+#         return HttpResponse("Cadastro efetuado com sucesso.")
+#     return render(request, "500.html")
 
 # -------- HTTP ERROR PAGES --------
 
