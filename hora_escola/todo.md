@@ -5,10 +5,19 @@
 ## Xandinho
 
 * [ ] TDD - SEMPRE
-* [ ] Crias as telas de erros 505, 404 e 303
-* [ ] Criar base.html em conformes as aulas do Henrique
-* [ ] Criar tela de login - Formata o CSS
-* [ ] Validar telefones - Forms e se possível no front
+* [x] Criar as telas de erros 505, 404 e 303
+* [x] Criar base.html em conformes as aulas do Henrique
+* [x] Criar tela de login - Formata o CSS
+* [x] Validar telefones - Forms e se possível no front
+* [x] Criar formulário de registro de usuários/client
+
+### Lembretes
+* [ ] RODAR TESTES NO FORMS E MODELS
+* [ ] Criar as validações do Forms
+* [ ] PROCURAR FALHAS NO REGISTRO DE USUÁRIO
+* [ ] Criar as Views de autenticação
+* [ ] Criar uma página principal para usuários autenticados
+* [ ] Adaptar o CSS as convenções do projeto
 
 ## Lucas
 
