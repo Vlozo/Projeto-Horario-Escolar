@@ -1,6 +1,8 @@
 from django import forms
 from .models import Client
 from django.forms.widgets import NumberInput
+from django.contrib.auth.models import User
+
 
 
 USER_TYPE_CHOICES = [
@@ -9,34 +11,52 @@ USER_TYPE_CHOICES = [
     ('responsavel', 'Responsável'),
 ]
 
-# class CadastroForm(forms.ModelForm):
-#
-#     nome = forms.CharField(
-#         max_length = 45,
-#         min_length = 8,
-#         required= False,
-#         widget=forms.TextInput(attrs={'placeholder':'Nome Completo*', 'id': 'nome', 'class': 'hidden'}))
-#
-#     tipo = forms.ChoiceField(
-#         choices = USER_TYPE_CHOICES,
-#         widget=forms.Select(attrs={'id': 'select_id'}))
-#
-#     confirmar_senha = forms.CharField(
-#         min_length= 8,
-#         widget = forms.PasswordInput(attrs={'placeholder':'Confirmar senha*', 'id':'confirmar_senha'}))
-#
-#     class Meta:
-#         model = Usuario
-#         fields = ['matricula', 'data_nascimento', 'email', 'telefone', 'senha']
-#         widgets = {
-#             'matricula':forms.TextInput(attrs={'placeholder':'Matrícula*', 'id':'matricula'}),
-#             'data_nascimento':NumberInput(attrs={'type': 'date'}),
-#             'email':forms.EmailInput(attrs={'placeholder':'Email*', 'id':'email'}),
-#             'telefone':forms.TextInput(attrs={'placeholder':'Telefone/Celular', 'id':'telefone'}),
-#             'senha':forms.PasswordInput(attrs={'placeholder':'Senha*', 'id':'senha'})
-#         }
-#
-#
+class RegistrationForm(forms.ModelForm):
+
+    username = forms.EmailField(
+        max_length = 60,
+        widget = forms.EmailInput(attrs={'placeholder':'Email*', 'id':'email'}))
+    
+    password1 = forms.CharField(
+        min_length= 8,
+        widget=forms.PasswordInput(attrs={'placeholder':'Senha*', 'id':'password1'}))
+    
+    password2 = forms.CharField(
+        min_length= 8,
+        widget = forms.PasswordInput(attrs={'placeholder':'Confirmar senha*', 'id':'password2'}))
+
+    fullname = forms.CharField(
+        max_length = 45,
+        min_length = 8,
+        required = False,
+        widget = forms.TextInput(attrs={'placeholder':'Nome Completo*', 'id': 'fullname', 'class': 'hidden'}))
+
+    type = forms.ChoiceField(
+        choices = USER_TYPE_CHOICES,
+        widget = forms.Select(attrs={'id': 'user_type'})
+    )
+
+    class Meta:
+        model = Client
+        fields = ['phone', 'student_id', 'type', 'birthdate']
+        widgets = {
+            'phone':forms.TextInput(attrs={'placeholder':'Telefone/Celular', 'id':'phone'}),
+            'student_id':forms.TextInput(attrs={'placeholder':'Matrícula*', 'id':'id_number'}),
+            'birthdate':forms.NumberInput(attrs={'type':'date'})
+        }
+    
+    def save(self, commit=True):
+        user = User.objects.create_user(
+            username=self.cleaned_data['username'],
+            password=self.cleaned_data['password1']
+        )
+        client = super(RegistrationForm, self).save(commit=False)
+        client.user = user
+        if commit:
+            client.save()
+        return client
+
+
 #     def clean(self):
 #         cleaned_data = super().clean()
 #         matricula = cleaned_data.get('matricula')
