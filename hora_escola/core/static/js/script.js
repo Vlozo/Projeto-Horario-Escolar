@@ -67,11 +67,3 @@ icon.addEventListener('click', function() {
     }
 })
 
-// Mostrar Erros
-
-document.body.addEventListener('htmx:beforeSwap', function(evt) {    
-    // indica que erros deverão ser renderizados 
-    evt.detail.shouldSwap = true;
-    // suprime mensagens de erro do console  
-    evt.detail.isError = false;
-});
