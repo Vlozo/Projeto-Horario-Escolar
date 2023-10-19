@@ -1,12 +1,15 @@
-from django.contrib.auth.models import User
 from django.db import models
-
+from django.contrib.auth.models import User
 
 class Room_Class(models.Model):
     room_class = models.IntegerField(null=True)
 
     def __str__(self):
         return f"{self.room_class}"
+    
+    class Meta:
+        verbose_name = "Turma"
+        verbose_name_plural = "Turmas"
 
 
 class TimeTable(models.Model):
@@ -34,7 +37,7 @@ USER_TYPE_CHOICES = [
 class Client(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, to_field="username")
     room_class = models.ForeignKey(Room_Class, on_delete=models.CASCADE, null=True, blank=True)
-    dependent = models.ManyToManyField(User, related_name='user_dependent')
+    dependent = models.ManyToManyField(User, related_name='user_dependent', blank=True)
     club = models.ForeignKey(Club, on_delete=models.CASCADE, null=True, blank=True)
 
     student_id = models.CharField(max_length=24, null=True, blank=True)
