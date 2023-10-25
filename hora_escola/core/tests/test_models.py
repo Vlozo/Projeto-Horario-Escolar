@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from ..models import Client, USER_TYPE_CHOICES
 
-class UserAuthenticationTest(TestCase):
+class UserCreationTest(TestCase):
 
     def test_create_user(self):
         user = User.objects.create_user(username="teste@gmail.com", 
