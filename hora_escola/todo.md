@@ -12,9 +12,9 @@
 * [x] Criar formulário de registro de usuários/client
 
 ### Lembretes
-* [ ] RODAR TESTES NO FORMS E MODELS
-* [ ] Criar as validações do Forms
-* [ ] PROCURAR FALHAS NO REGISTRO DE USUÁRIO
+* [x] RODAR TESTES NO FORMS E MODELS
+* [x] Criar as validações do Forms
+* [x] PROCURAR FALHAS NO REGISTRO DE USUÁRIO
 * [ ] Criar as Views de autenticação
 * [ ] Criar uma página principal para usuários autenticados
 * [ ] Adaptar o CSS as convenções do projeto
