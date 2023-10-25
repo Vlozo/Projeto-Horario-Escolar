@@ -10,7 +10,7 @@ def home(request):
     return HttpResponse(template.render())
 
 def sign_up(request):
-    template = 'SignUpPage.html'
+    template = 'signUp.html'
     if request.method == 'GET':
         form = RegistrationForm()
         return render(request, template, {'form': form})
