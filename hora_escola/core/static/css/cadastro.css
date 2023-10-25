@@ -76,6 +76,22 @@ li#instruction {
     color: #3482db !important;
 }
 
+div.error_msg {
+    padding: 8px 8px;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    
+}
+
+div.error_msg > p {
+    margin: 0px 0px 0px 0px;
+}
+
+div.error_msg > strong {
+    margin-bottom: 3px;
+}
 /* Configurações de responsividade */
 
 /* ---- [Tablet] ---- */
@@ -99,6 +115,18 @@ li#instruction {
         width: 90vw;
     }
 
+    div.error_msg {
+        padding: 16px 8px;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 12px;
+        
+    }
+
+    div.error_msg > strong {
+        margin: 0px 4px 0px 0px
+    }
+
 }
 
 /* ---- [Computadores/Laptops] ---- */
@@ -120,6 +148,18 @@ li#instruction {
     aside.window {
         width: 50vw;
         margin: 5.5% 0px 12px 0px;
+    }
+
+    div.error_msg {
+        padding: 16px 16px;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 12px;
+        
+    }
+
+    div.error_msg > strong {
+        margin: 0px 4px 0px 0px
     }
 
 }

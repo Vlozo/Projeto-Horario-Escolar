@@ -139,3 +139,17 @@ input:focus, textarea:focus {
     border: none;
     box-shadow: none;
 }
+
+/* ---- Mensagens de erro do Django ---- */
+
+div.error_msg {
+    color: rgb(70, 46, 59);
+    background-color: rgb(250, 206, 206);
+    border: 1px solid rgb(235, 159, 159);
+    border-radius: 4px;
+    text-align: left;
+}
+
+div.error_msg > ul {
+    list-style-type: none;
+}
