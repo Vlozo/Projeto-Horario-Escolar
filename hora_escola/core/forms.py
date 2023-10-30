@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.contrib.auth.forms import AuthenticationForm
 from .models import Client
 from .validators import validate_password, validate_fullname, validate_phone, only_numbers_validate
 
@@ -124,5 +125,16 @@ def save_user(self, commit = True):
     if commit:
         client.save()
     return client
+
+
+class AuthenticationFormCustomized(AuthenticationForm):
+    username = forms.EmailField(
+        max_length = 60,
+        widget = forms.EmailInput(attrs={'placeholder':'Email', 'id':'email'}))
+    
+    password = forms.CharField(
+        min_length = 8,
+        widget=forms.PasswordInput(attrs={'placeholder':'Senha', 'id':'password'}))
+
 
 
