@@ -7,30 +7,30 @@ const rootElement = document.documentElement
 const lightTheme = {
     '--background-color': '#eff1f3',
     '--text-color': '#000000',
-    '--button-text': '#ffffff',
-    '--destaque': '#3482db',
+    '--text-button': '#ffffff',
+    '--color-highlight': '#3482db',
     '--login-bg': '#ffffff',
     '--input-bg': '#ffffff',
     '--input-txt': '#000000',
     '--input-border': '#cacaca',
     '--input-placeholder': '#949494',
-    '--button-entrar': '#3482db',
-    '--button-novaconta': '#289c55',
+    '--button-submit': '#3482db',
+    '--button-green': '#289c55',
     '--switch-color': '#212529',
 }
 
 const darkTheme = {
     '--background-color': '#212529',
     '--text-color': '#d4d4d4',
-    '--button-text': '#e9e9e9',
-    '--destaque': '#3a8ff1',
+    '--text-button': '#e9e9e9',
+    '--color-highlight': '#3a8ff1',
     '--login-bg': '#343a41',
     '--input-bg': '#4d5157',
     '--input-txt': '#d1d6db',
     '--input-border': '#71757c',
     '--input-placeholder': '#949494',
-    '--button-entrar': '#3482db',
-    '--button-novaconta': '#228849',
+    '--button-submit': '#3482db',
+    '--button-green': '#228849',
     '--switch-color': '#eff1f3',
 }
 
@@ -53,7 +53,7 @@ function changeProperty(property, value) {
 // Mostrar/Esconder Senha
 
 let container = document.querySelector('div.input_field')
-let input = document.querySelector('input#senha_id')
+let input = document.querySelector('input#password')
 let icon = document.querySelector('img#eye-icon')
 
 icon.addEventListener('click', function() {

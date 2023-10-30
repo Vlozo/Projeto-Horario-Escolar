@@ -12,15 +12,15 @@
 :root {
     --background-color: #eff1f3;
     --text-color: #000000;
-    --button-text: #ffffff;
-    --destaque: #3482db;
+    --text-button: #ffffff;
+    --color-highlight: #3482db;
     --login-bg: #ffffff;
     --input-bg: #ffffff;
     --input-txt: #000000;
     --input-border: #cacaca;
     --input-placeholder: #949494;
-    --button-entrar: #3482db;
-    --button-novaconta: #289c55;
+    --button-submit: #3482db;
+    --button-green: #289c55;
     --switch-color: #212529;
 }
 
@@ -39,7 +39,7 @@ section > h1 {
     font-size: 2.5em;
     font-weight: bold;
     line-height: 1;
-    color: var(--destaque);
+    color: var(--color-highlight);
 }
 
 section > p {
@@ -68,8 +68,8 @@ div.input_field > input {
 }
 
 div#submit_button > input {
-    background-color: var(--button-entrar);
-    color: var(--button-text);
+    background-color: var(--button-submit);
+    color: var(--text-button);
     font-size: 1em;
     font-weight: bold;
     border: none;
@@ -90,7 +90,7 @@ input::placeholder {
 
 a {
     text-decoration: none;
-    color: var(--destaque);
+    color: var(--color-highlight);
 }
 
 a:hover {
@@ -99,16 +99,16 @@ a:hover {
 
 /* ---- Botão Secundário (sem submit) ---- */
 
-div#button_nova_conta > a {
+div#green_button > a {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    color: var(--button-text);
+    color: var(--text-button);
     
 }
 
-div#button_nova_conta {
-    background-color: var(--button-novaconta);
+div#green_button {
+    background-color: var(--button-green);
     border-radius: 8px;
     transition: 0.2s;
     padding: 14px;
@@ -116,7 +116,7 @@ div#button_nova_conta {
 
 }
 
-div#button_nova_conta:hover {
+div#green_button:hover {
     cursor: pointer;
     background-color: #1e5533;   
 }
@@ -135,7 +135,7 @@ div.input_field > select {
 }
 
 input:focus, textarea:focus {
-    outline-color: var(--destaque);
+    outline-color: var(--color-highlight);
     border: none;
     box-shadow: none;
 }
