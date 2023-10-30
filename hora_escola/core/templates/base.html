@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    {% comment %} Mostra o estado de autenticação do usuário / leva ao registro e ao login {% endcomment %}
+    <header>
+        {% if user.is_authenticated %}
+        <p>Bem vindo, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
+        {% else %}
+        <p><a href="{% url 'sign_in' %}">Login</a> | <a href="{% url 'sign_up' %}">Cadastre-se</a> | <a href="{% url 'home' %}">Home</a></p>
+        {% endif %}
+    </header>
+
+    {% comment %} Mostra as mensagens geradas pelo sistema{% endcomment %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

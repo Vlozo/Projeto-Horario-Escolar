@@ -1,13 +1,25 @@
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
-from .forms import RegistrationForm
-from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate, logout 
+from .forms import RegistrationForm, AuthenticationFormCustomized
 
-
-def home(request):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render())
+def sign_in(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+    if request.method == 'POST':
+        form = AuthenticationFormCustomized(request, request.POST)
+        if form.is_valid():
+            email = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(request, username=email, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+    else:
+        form = AuthenticationFormCustomized()
+    return render(request, 'index.html', {'form':form})
 
 def sign_up(request):
     template = 'signUp.html'
@@ -19,10 +31,18 @@ def sign_up(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save(commit=True)
-            return redirect('home')
-    
+            return redirect('sign_in')
         else:
-            return render(request, template, {'form':form})   
+            return render(request, template, {'form':form})
+
+@login_required
+def home(request):
+    template = 'home.html'
+    return render(request, template)
+
+
+
+#  ----- PAGINAS DE ERRO -----
 
 def handler400(request, exception):
     template = loader.get_template('400.html')

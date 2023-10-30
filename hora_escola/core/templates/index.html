@@ -32,16 +32,17 @@
 
         <!-- LOGIN -->
             <aside class="window">
-                <form action="qualquer.php" method="post" id="form_login" autocomplete="off">
+                <form method="post" id="form_login" autocomplete="off">
+                    {% csrf_token %}
 
                     <!--EMAIL-->
                     <div class="input_field">
-                        <input type="email" name="email" id="email_id" placeholder="Email">
+                        {{ form.username }}
                     </div>
 
                     <!--SENHA-->
                     <div class="input_field">
-                        <input type="password" name="senha" id="senha_id" placeholder="Senha">
+                        {{ form.password }}
                         <img id="eye-icon" src="static/assets/eye.svg" alt="ícone olho">
                     </div>
 
@@ -52,7 +53,7 @@
 
                     <!-- ESQUECI A SENHA E CRIAR NOVA CONTA-->
                     <p><a href="#">Esqueceu a senha?</a></p>
-                    <div id="button_nova_conta"><a href={% url 'sign_up' %}>Criar nova conta</a></div>
+                    <div id="green_button"><a href={% url 'sign_up' %}>Criar nova conta</a></div>
 
                 </form>
             </aside>
