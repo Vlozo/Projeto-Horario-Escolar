@@ -15,9 +15,9 @@
 * [x] RODAR TESTES NO FORMS E MODELS
 * [x] Criar as validações do Forms
 * [x] PROCURAR FALHAS NO REGISTRO DE USUÁRIO
-* [ ] Criar as Views de autenticação
-* [ ] Criar uma página principal para usuários autenticados
-* [ ] Adaptar o CSS as convenções do projeto
+* [x] Criar as Views de autenticação
+* [x] Criar uma página principal para usuários autenticados
+* [x] Adaptar o CSS as convenções do projeto
 
 ## Lucas
 
